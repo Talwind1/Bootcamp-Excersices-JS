@@ -8,6 +8,7 @@ if (mikeAvg > johnAvg) {
 } else if (mikeAvg < johnAvg) {
   winner = johnAvg;
   console.log(`John's team win. Their average score is ${winner}`);
-} else {
-  console.log("Both teams win");
+} 
+else {
+  console.log("There is a draw");
 }
