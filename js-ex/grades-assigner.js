@@ -1,15 +1,15 @@
 function gradesAssign(score) {
   let grade;
-  if (score >= 0 && score <= 64) {
-    grade = "F";
-  } else if (score > 64 && score <= 69) {
-    grade = "D";
-  } else if (score > 69 && score <= 79) {
-    grade = "C";
-  } else if (score > 79 && score <= 89) {
-    grade = "B";
-  } else {
+  if (score >= 90) {
     grade = "A";
+  } else if (score >= 80) {
+    grade = "B";
+  } else if (score >= 70) {
+    grade = "C";
+  } else if (score >= 65) {
+    grade = "D";
+  } else {
+    grade = "F";
   }
-  return grade;
+  console.log(grade);
 }
