@@ -10,6 +10,6 @@ function darkLightColor(color) {
     case "brown":
       return "dark color";
     default:
-      return "unknown color";
+      return "Unknown color";
   }
 }
