@@ -42,7 +42,3 @@ const bookUtils = {
     }
   },
 };
-
-bookUtils.setPublisher(book1, "Hebrew", "Emi");
-bookUtils.setPublisher(book2, "Hebrew", "Emi");
-console.log(bookUtils.isSamePublisher(book1, book2));
