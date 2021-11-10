@@ -8,6 +8,9 @@ const mycountry = {
     console.log(`${this.country} has ${this.population} people, their mother tongue is ${this.language}, they
     have ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`);
   },
+  checkIsland: function () {
+    this.isIsland = !this.neighbours.length;
+  },
 };
 
 console.log(mycountry.describe());
