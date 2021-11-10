@@ -10,4 +10,3 @@ function bookDetails(book) {
   return `The book ${book.name} was written by ${book.author} in
 the year ${book.publishYear}`;
 }
-console.log(bookDetails(book));
