@@ -27,5 +27,4 @@ people.indexOf("Foo");
 
 const people1 = ["Greg", "Mary", "Devon", "James"];
 people1.splice(2, 1, "Elizabeth", "Artie"); //removes Devon using splice and adding two more names
-let withBob = people1 + "Bob";
-console.log(withBob);
+let withBob = people1.concat("Bob");
