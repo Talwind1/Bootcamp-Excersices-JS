@@ -32,4 +32,3 @@ const monthsOfYear = [
 let announceDate = function () {
   return `Today is ${daysOfWeek[day]} the ${date} of ${monthsOfYear[month]}, ${year}`;
 };
-console.log(announceDate());
