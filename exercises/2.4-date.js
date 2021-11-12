@@ -1,10 +1,35 @@
-let now = Date.now();
-let today = new Date(now);
-let day = today.getYear();
-console.log(day);
-// currentDate = currentDate.pase();
-// console.log(currentDate);
-// let currentDay = currentDate.getDay(currentDate);
+const currentDate = new Date(); //creates a new date of today!
 
-// var today = new Date();
-// var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+const [month, date, day, year] = [
+  currentDate.getMonth(),
+  currentDate.getDate(),
+  currentDate.getDay(),
+  currentDate.getFullYear(),
+];
+const daysOfWeek = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+const monthsOfYear = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+let announceDate = function () {
+  return `Today is ${daysOfWeek[day]} the ${date} of ${monthsOfYear[month]}, ${year}`;
+};
+console.log(announceDate());
