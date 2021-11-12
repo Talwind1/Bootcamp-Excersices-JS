@@ -4,8 +4,8 @@ for (let i = 0; i < people.length; i++) {
   console.log(people[i]);
 }
 
-people.shift();
-people.pop();
+people.shift(); //remove  the front of the array
+people.pop(); //remove to the end of the array
 people.unshift("Matt"); //add to the front of the array
 people.push("Tal"); //add to the end of the array
 
@@ -20,13 +20,12 @@ while (i < people.length) {
   name = people[i];
 }
 
-let copy = people.slice(indexOf("Mary") + 1);
-let maryIndex = people.indexOf("Mary");
-let fooIndex = people.indexOf("Foo");
+let copy = people.slice(2);
+console.log(copy);
+people.indexOf("Mary");
+people.indexOf("Foo");
 
-let people1 = ["Greg", "Mary", "Devon", "James"];
-let dev = people1.indexOf("Devon") + 1;
-people1.splice(devonIndex, 1, "Elizabeth", "Artie");
-
-let bob = ["Bob"];
-let withBob = people.concat(bob);
+const people1 = ["Greg", "Mary", "Devon", "James"];
+people1.splice(2, 1, "Elizabeth", "Artie"); //removes Devon using splice and adding two more names
+let withBob = people1 + "Bob";
+console.log(withBob);
