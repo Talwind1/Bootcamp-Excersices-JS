@@ -1,12 +1,15 @@
 function fibonacci(startNum, n) {
-  let item = 1;
-  let itemNext = startNum + item;
-  let i = 3;
-  while (i < n) {
-    item += itemNext;
-    itemNext += item;
-    i++;
+  const fib = [startNum, 1];
+  let i;
+  let nextItem;
+  for (i = 2; i <= n; i++) {
+    // Next fibonacci number = previous + one before previous
+    nextItem = fib[i - 2] + fib[i - 1];
+
+    fib.push(nextItem);
   }
-  return item;
+
+  return nextItem;
 }
-console.log(fibonacci(0, 5));
+
+console.log(fibonacci(0, 6));

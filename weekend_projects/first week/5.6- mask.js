@@ -12,4 +12,3 @@ function maskify(string) {
   }
   return answer;
 }
-console.log(maskify("!!"));

@@ -7,3 +7,5 @@ function growth(p0, percent, aug, p) {
   }
   return years;
 }
+
+console.log(growth(1000, null, 50, 1200));
