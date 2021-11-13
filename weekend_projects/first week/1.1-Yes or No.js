@@ -5,5 +5,3 @@ function yesOrNo(whatIsThis) {
     return "No";
   }
 }
-
-console.log(yesOrNo(false));

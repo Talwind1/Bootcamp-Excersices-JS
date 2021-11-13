@@ -1,4 +1,8 @@
 function nextPerfectSquare(squaredNum) {
+  let perfectSquare = -1;
   let perfectSqrt = Math.sqrt(squaredNum);
-  return Math.pow(perfectSqrt + 1, 2);
+  if (perfectSqrt === Math.round(perfectSqrt)) {
+    perfectSquare = Math.pow(perfectSqrt + 1, 2);
+  }
+  return perfectSquare;
 }

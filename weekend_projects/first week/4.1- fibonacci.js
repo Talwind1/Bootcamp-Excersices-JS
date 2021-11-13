@@ -5,11 +5,8 @@ function fibonacci(startNum, n) {
   for (i = 2; i <= n; i++) {
     // Next fibonacci number = previous + one before previous
     nextItem = fib[i - 2] + fib[i - 1];
-
-    fib.push(nextItem);
+    fib[i] = nextItem; //fib.push(nextItem);
   }
 
   return nextItem;
 }
-
-console.log(fibonacci(0, 6));

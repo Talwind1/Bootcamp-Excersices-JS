@@ -11,8 +11,3 @@ function findUniq(arrNum) {
   }
   return uniq;
 }
-
-console.log(findUniq([5, 0, 0, 0, 0, 0])); //first
-console.log(findUniq([0, 0, 0, 0, 0, 5])); //last
-console.log(findUniq([0, 5, 0, 0, 0, 0])); //second
-console.log(findUniq([0, 0, 0, 5, 0, 0])); //middle
