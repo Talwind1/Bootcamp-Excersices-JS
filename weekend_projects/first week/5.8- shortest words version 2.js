@@ -16,7 +16,7 @@ function longestWord(text) {
   return longestWord;
 }
 
-//! later check !
+//! note to self - later check !
 
 // while (sizes.indexOf(maxSize, maxInd + 1) !== -1) {
 //   maxInd = sizes.indexOf(maxSize, maxInd); //
