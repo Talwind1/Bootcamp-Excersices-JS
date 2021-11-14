@@ -5,4 +5,3 @@ function sumMin(arrayNum) {
   let min2 = Math.min.apply(Math, arrayNum);
   return min1 + min2;
 }
-console.log(sumMin([1, 2, 3, 4, 0]));
