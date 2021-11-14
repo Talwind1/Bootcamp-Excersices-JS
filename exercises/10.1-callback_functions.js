@@ -16,9 +16,16 @@ function firstWordUpperCase(str, func) {
   return func(str);
 }
 
+//exersice 2
+function firstWordUpperCase(str, func) {
+  str = str[0].toUpperCase() + str.slice(1);
+
+  return func(str);
+}
+
 function dashes(str) {
   let str1 = str.replaceAll(" ", "-");
-  console.log(str1);
+
   return str1;
 }
 
