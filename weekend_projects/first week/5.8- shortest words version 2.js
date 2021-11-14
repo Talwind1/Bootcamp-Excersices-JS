@@ -6,13 +6,14 @@ function longestWord(text) {
   }
   let maxSize = Math.max.apply(Math, sizes);
   let maxInd = sizes.indexOf(maxSize, 0);
-  let maxWord = words[maxInd];
-  while (sizes.indexOf(maxSize, maxInd) !== -1) {
-    maxInd = sizes.indexOf(maxSize, maxInd);
-    maxWord += ", " + words[maxInd];
-  }
+  let longestWord = words[maxInd];
+  // while (sizes.indexOf(maxSize, maxInd) !== -1) {
+  //   maxInd = sizes.indexOf(maxSize, maxInd);
+  //   let anotherWord = words[maxInd];
+  //   longestWord += ", " + anotherWord;
+  // }
 
-  return maxWord;
+  return longestWord;
 }
 
 console.log(longestWord("heloooo ma kore"));
