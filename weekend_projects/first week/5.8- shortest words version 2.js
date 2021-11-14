@@ -15,11 +15,3 @@ function longestWord(text) {
   }
   return longestWord;
 }
-
-//! note to self - later check !
-
-// while (sizes.indexOf(maxSize, maxInd + 1) !== -1) {
-//   maxInd = sizes.indexOf(maxSize, maxInd); //
-//   console.log(maxInd);
-//   longestWord = longestWord + ", " + words[maxInd];
-// }
