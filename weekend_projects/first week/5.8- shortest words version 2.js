@@ -7,13 +7,19 @@ function longestWord(text) {
   let maxSize = Math.max.apply(Math, sizes);
   let maxInd = sizes.indexOf(maxSize, 0);
   let longestWord = words[maxInd];
-  // while (sizes.indexOf(maxSize, maxInd) !== -1) {
-  //   maxInd = sizes.indexOf(maxSize, maxInd);
-  //   let anotherWord = words[maxInd];
-  //   longestWord += ", " + anotherWord;
-  // }
-
+  for (let i = maxInd + 1; i < sizes.length; i++) {
+    let j = sizes.indexOf(maxSize, i);
+    if (j != -1) {
+      longestWord += ", " + words[j];
+    }
+  }
   return longestWord;
 }
 
-console.log(longestWord("heloooo ma kore"));
+//! later check !
+
+// while (sizes.indexOf(maxSize, maxInd + 1) !== -1) {
+//   maxInd = sizes.indexOf(maxSize, maxInd); //
+//   console.log(maxInd);
+//   longestWord = longestWord + ", " + words[maxInd];
+// }
