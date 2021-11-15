@@ -1,8 +1,15 @@
 //exersice 1
 function isString(str, func) {
-  if (typeof str === "string") {
+  if (typeof str !== string) {
+    throw new TypeError("str is not a string!")
+  }
+  if (typeof func !== function) {
+    throw new TypeError("func is not a function!")
+  }
+  else{
     func(str);
   }
+
 }
 
 function print(str) {
