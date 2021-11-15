@@ -42,11 +42,9 @@ const data = [
 ];
 
 function getName(arr) {
-  const names = [];
-  arr.forEach(function (person) {
-    names.push(person.name);
+  return arr.map((user) => {
+    return user.name || user.firstName;
   });
-  return names;
 }
 console.log(getName(data));
 
@@ -60,15 +58,12 @@ function ageFilter(arr) {
   return people;
 }
 
-function foodFreq(arr){
-    const foodFreq={};
-    arr.forEach(function(person){
-    person.favoriteFoods.forEach(function(itemFoods){
-    itemFoods.forEach(function(food) {
-        if(!foodFreq[food]) foodFreq[food]=1;
-    else{
-        foodFreq[food]++;
-    }})})
-    return foodFreq;
-}
+function foodFreq(arr) {
+  const foodFreq = {};
+  arr.forEach((person) => {
+    person.favoriteFoods.meats.forEach((meatFood) => {
+      foodFreq[meatFood] = foodFreq[meatFood] + 1 || 1;
+    });
+  });
+  return foodFreq;
 }
