@@ -66,9 +66,27 @@ function capitalize(str) {
 }
 
 function shiftLetters(str) {
-  const arr = str.split("");
-  return arr.map((char) => {
-    return codePointAt(char) + 1;
-  });
+  let result = str
+    .split("")
+    .map(function (val) {
+      let letterKey = val.charCodeAt() - 13;
+      if (letterKey < 65) {
+        letterKey = 90 - (65 - letterKey - 1);
+      }
+      console.log(letterKey);
+      return String.fromCharCode(letterKey);
+    })
+    .join("");
+  return result;
 }
-console.log(shiftLetters("carmush111"));
+
+function swapCase(str) {
+  arrStr = str.split("");
+  return arrStr
+    .map((char) => {
+      return capitalize(char);
+    })
+    .join("");
+}
+
+console.log(swapCase("tal"));
