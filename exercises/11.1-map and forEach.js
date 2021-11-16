@@ -48,5 +48,3 @@ function getNameId2(newReleases) {
   });
   return movies;
 }
-
-console.log(getNameId2(newReleases));

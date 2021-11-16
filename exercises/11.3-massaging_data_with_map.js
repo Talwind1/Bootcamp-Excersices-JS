@@ -65,5 +65,11 @@ function foodFreq(arr) {
       foodFreq[meatFood] = foodFreq[meatFood] + 1 || 1;
     });
   });
+  arr.forEach((person) => {
+    person.favoriteFoods.fish.forEach((fishFood) => {
+      foodFreq[fishFood] = foodFreq[fishFood] + 1 || 1; // if the first as
+    });
+  });
+
   return foodFreq;
 }

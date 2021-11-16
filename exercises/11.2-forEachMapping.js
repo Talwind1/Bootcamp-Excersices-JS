@@ -66,19 +66,22 @@ function capitalize(str) {
 }
 
 function shiftLetters(str) {
+  let alephaBet="abcdefghijklmnopqrstuvwxyz"
+  let s=[];
   let result = str
+    .toLowerCase()
     .split("")
     .map(function (val) {
-      let letterKey = val.charCodeAt() - 13;
-      if (letterKey < 65) {
-        letterKey = 90 - (65 - letterKey - 1);
+      if (alephaBet.indexOf(val)>0){
+        s.push(alephaBet[indexOf(val)-1])
       }
-      console.log(letterKey);
-      return String.fromCharCode(letterKey);
-    })
-    .join("");
-  return result;
-}
+      else{
+        s.push(alephaBet[indexOf(val)-1])
+      })
+      return s.join('');
+    }
+ 
+console.log(shiftLetters("tal"));
 
 function swapCase(str) {
   arrStr = str.split("");

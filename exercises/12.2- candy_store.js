@@ -24,7 +24,7 @@ function getCandy(candyStore, id) {
 
 function getPrice(candyStore, id) {
   let candy = getCandy(candyStore, id);
-  return candy.price;
+  return candy[price];
 }
 
 console.log(getPrice(candyStore, "as12f"));
