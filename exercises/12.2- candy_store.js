@@ -20,6 +20,7 @@ function getCandy(candyStore, id) {
   const candy = candyStore.candies.find((candy) => {
     return candy.id === id;
   });
+
   return candy;
 }
 
@@ -46,6 +47,3 @@ function buyCandy(candyStore, id) {
   candy.amount = candy.amount - 1;
   candyStore.cashRegister += price;
 }
-
-buyCandy(candyStore, "blabla123");
-console.log(candyStore.cashRegister);
