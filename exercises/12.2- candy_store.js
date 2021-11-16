@@ -17,28 +17,35 @@ const candyStore = {
 };
 
 function getCandy(candyStore, id) {
-  return candyStore.candies.find((candy) => {
+  const candy = candyStore.candies.find((candy) => {
     return candy.id === id;
   });
+  return candy;
 }
 
 function getPrice(candyStore, id) {
-  let candy = getCandy(candyStore, id);
-  return candy[price];
+  return getCandy(candyStore, id).price;
 }
 
-console.log(getPrice(candyStore, "as12f"));
 function addCandy(candyStore, id, name, price) {
-  let candy = { name: name, id: id, price: price, amount: 1 };
-  candyStore.candies.push(candy);
+  if (getCandy(candyStore, id)) {
+    getCandy(candyStore, id).amount++;
+  } else {
+    const newCandy = { name: name, id: id, price: price, amount: 1 };
+    candyStore.candies.push(newCandy);
+  }
 }
 
-function buy(candyStore, id) {
-  let price = getPrice(candyStore, id);
+function buyCandy(candyStore, id) {
+  const price = getPrice(candyStore, id);
   candyStore.cashRegister += price;
-  let candy = getCandy(candyStore, id);
+  const candy = getCandy(candyStore, id);
+  if (candy.amount < 1) {
+    console.log("Out of stock!");
+  }
   candy.amount = candy.amount - 1;
+  candyStore.cashRegister += price;
 }
 
-buy(candyStore, "blabla123");
+buyCandy(candyStore, "blabla123");
 console.log(candyStore.cashRegister);
