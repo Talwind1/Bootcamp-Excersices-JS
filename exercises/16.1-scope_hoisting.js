@@ -68,4 +68,17 @@ function funcD2() {
 funcD2();
 console.log(e);
 // d is a global variable so its logged to the console. e was define inside
-//a function so
+//a function so when the function closes it removed and we will get an error.
+
+//Block 6
+function funcE() {
+  console.log("Value of f in local scope: ", f);
+}
+console.log("Value of f in global scope: ", f);
+var f = 1;
+funcE();
+
+//firstly, the second console log will execute and f will be undefined because it
+//declared later in the same scope with the word var.
+// After that, funcE envokes and it console log the same phrase but f will be equal
+//to 1 since it already seted to this value.
