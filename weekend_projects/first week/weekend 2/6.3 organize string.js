@@ -1,11 +1,10 @@
-function dupliCount(str) {
+function organize(s1, s2) {
+  let str = s1 + s2;
   let freq = stringFreq(str);
-  let arrValues = Object.values(freq);
-
-  let duplicates = arrValues.filter((val) => {
-    return val > 1;
-  });
-  return duplicates.length;
+  let arr = Object.keys(freq);
+  arr = arr.sort();
+  let organizedStr = arr.toString().replaceAll(",", "");
+  return organizedStr;
 }
 
 function stringFreq(str) {

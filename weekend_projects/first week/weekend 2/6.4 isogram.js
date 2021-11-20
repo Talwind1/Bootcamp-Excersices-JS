@@ -1,11 +1,10 @@
-function dupliCount(str) {
+function isogram(str) {
   let freq = stringFreq(str);
   let arrValues = Object.values(freq);
-
-  let duplicates = arrValues.filter((val) => {
-    return val > 1;
+  let arr = arrValues.filter((val) => {
+    return val < 2;
   });
-  return duplicates.length;
+  return arr.length === arrValues.length;
 }
 
 function stringFreq(str) {
